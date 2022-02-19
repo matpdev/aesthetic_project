@@ -1,38 +1,87 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --rose: #ECD1D9;
+  --blue100: #235058;
+  --blue10: #C5D5D8;
+  --blue50: #759FA5;
+  --blue80: #265858;
+}
+
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+a{
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+a:link{
+  color: var(--blue100);
+}
+
+a:visited{
+  color: var(--blue100);
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+body {
   text-align: center;
+  background-color: var(--blue10);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main{
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ---------- MAIN ---------- */
+
+.main-ball{
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--rose);
+  width: 550px;
+  height: 550px;
+  top: -250px;
+  right: -150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------- HEADER ---------- */
+
+.Header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.Header-nav{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header-nav a{
+  margin: 0 20px;
 }
+
+.Header-search a, .Header-search button{
+  margin: 0 20px;
+}
+
+/* ---------- HEADER ---------- */
